@@ -14,7 +14,7 @@ To report a security vulnerability, please follow these steps:
 
 This security policy applies to the following versions of the Software:
 
-We only provide security updates for the latest stable release. It is recommended to keep your Red Team Manual installation up to date.
+We only provide security updates for the latest stable release. It is recommended to keep your software installation up to date.
 
 ## Security Updates
 
